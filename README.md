@@ -4,7 +4,6 @@ Welcome to Bryan Miller's CV Application Project, the [nineteenth assignment](ht
 
 - React (first introduction)
   - `create-react-app`
-  - Functional Components
   - Class Components
   - Props & State
 - Git Feature Branches & Merging
