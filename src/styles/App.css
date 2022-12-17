@@ -1,0 +1,6 @@
+.app-container {
+  margin: 1rem auto;
+  max-width: 900px;
+  padding: 1rem;
+  /* border-radius: var(--border-radius-900); */
+}

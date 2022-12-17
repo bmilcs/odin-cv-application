@@ -1,18 +1,37 @@
 header {
-  /* background: var(--clr-neutral-800); */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem;
+}
+
+svg {
+  height: 5rem;
+  fill: var(--clr-primary-200);
 }
 
 h1 {
-  padding: 0.5rem;
-
-  color: var(--clr-neutral-900);
+  color: var(--clr-neutral-800);
 
   text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: -1.75px;
+  word-spacing: -5px;
+  line-height: 0.8;
+
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 h1 span {
-  color: var(--clr-primary-500);
+  color: var(--clr-primary-400);
+}
+
+p {
+  line-height: 1;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--clr-neutral-700);
+  text-transform: uppercase;
+  padding-left: 0.2rem;
 }

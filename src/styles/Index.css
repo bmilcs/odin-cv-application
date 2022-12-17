@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;700;800;900&display=swap");
+
 *,
 *::before,
 *::after {
@@ -9,10 +10,12 @@
 
 :root {
   --ff-main: "Inter", sans-serif;
+  --ff-main: "Hind Siliguri", sans-serif;
 
   --clr-neutral-900: #141414;
-  --clr-neutral-800: #252525;
-  --clr-neutral-200: #e0e0e0;
+  --clr-neutral-800: #414141;
+  --clr-neutral-700: #616161;
+  --clr-neutral-200: #eeeeee;
   --clr-neutral-100: #fafafa;
   --clr-primary-50: #ebe0f2;
   --clr-primary-100: #ceb3de;
@@ -28,10 +31,13 @@
   --clr-primary-A200: #9e5eff;
   --clr-primary-A400: #7f2bff;
   --clr-primary-A700: #7012ff;
+
+  --border-radius-100: 0.25rem;
+  --border-radius-900: 1rem;
 }
 
 body {
   font-family: var(--ff-main);
-  color: var(--clr-neutral-100);
+  color: var(--clr-neutral-800);
   background: var(--clr-neutral-200);
 }
