@@ -1,0 +1,18 @@
+header {
+  /* background: var(--clr-neutral-800); */
+}
+
+h1 {
+  padding: 0.5rem;
+
+  color: var(--clr-neutral-900);
+
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+h1 span {
+  color: var(--clr-primary-500);
+}
