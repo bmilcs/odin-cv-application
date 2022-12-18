@@ -9,13 +9,14 @@
 }
 
 :root {
-  --ff-main: "Inter", sans-serif;
+  --ff-main-2: "Inter", sans-serif;
   --ff-main: "Hind Siliguri", sans-serif;
 
   --clr-neutral-900: #141414;
   --clr-neutral-800: #414141;
   --clr-neutral-700: #616161;
-  --clr-neutral-200: #eeeeee;
+  --clr-neutral-300: #d1d1d1;
+  --clr-neutral-200: #f0f0f0;
   --clr-neutral-100: #fafafa;
   --clr-primary-50: #ebe0f2;
   --clr-primary-100: #ceb3de;
@@ -32,12 +33,23 @@
   --clr-primary-A400: #7f2bff;
   --clr-primary-A700: #7012ff;
 
-  --border-radius-100: 0.25rem;
-  --border-radius-900: 1rem;
+  --border-radius-100: 0.3rem;
+  --border-radius-900: 0.5rem;
+
+  --box-shadow-100: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow-200: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --box-shadow-300: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+  --box-shadow-400: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  --box-shadow-500: 0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+  --box-shadow-600: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 body {
-  font-family: var(--ff-main);
+  font-family: var(--ff-main-2);
   color: var(--clr-neutral-800);
   background: var(--clr-neutral-200);
 }
