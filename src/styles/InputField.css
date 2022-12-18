@@ -1,0 +1,25 @@
+.input-container {
+  display: grid;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--clr-neutral-700);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+input {
+  padding: 0.6rem 0.75rem;
+
+  outline: 1px solid var(--clr-neutral-300);
+  border: 0;
+  border-bottom: 5px solid var(--clr-primary-100);
+  border-radius: var(--border-radius-100);
+
+  font: inherit;
+  font-size: 1.25rem;
+
+  background: var(--clr-neutral-200);
+}

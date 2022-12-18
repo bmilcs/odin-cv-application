@@ -1,0 +1,22 @@
+.input-group {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem 2rem;
+
+  padding: 2rem;
+
+  background: var(--clr-neutral-100);
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: var(--border-radius-900);
+  /* box-shadow: var(--box-shadow-100); */
+}
+
+h2 {
+  margin-block: 1rem;
+  font-size: 1.5rem;
+  /* text-transform: uppercase; */
+  /* background: var(--clr-primary-700); */
+  color: var(--clr-neutral-900);
+  padding: 0.5rem;
+}
