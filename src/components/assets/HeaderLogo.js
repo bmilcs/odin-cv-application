@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./Header";
 
 class HeaderLogo extends React.Component {
   render() {
