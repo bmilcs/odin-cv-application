@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/App.css";
 import Header from "./components/Header";
+import BasicInfo from "./components/BasicInfo";
 
 // section: name, email, phone
 // section: education, school name, study title, date of study
@@ -15,6 +16,7 @@ class App extends React.Component {
     return (
       <div className="app-container">
         <Header />
+        <BasicInfo />
       </div>
     );
   }
