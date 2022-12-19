@@ -1,56 +1,31 @@
 import React from "react";
-import FormSection from "./utils/FormSection";
+import Personal from "./form/Personal";
+import emptyForm from "./form/emptyForm";
 
 class Form extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      fields: [
-        {
-          type: "text",
-          description: "First Name",
-          id: "first_name",
-          value: "hi",
-        },
-        {
-          type: "text",
-          description: "Last Name",
-          id: "last_name",
-        },
-        {
-          type: "email",
-          description: "E-mail",
-          id: "email",
-        },
-        {
-          type: "tel",
-          description: "Phone",
-          id: "phone",
-        },
-      ],
-      basicInfo: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-      },
-    };
+    this.state = { ...emptyForm };
   }
 
-  handleOnChange = (i, e) => {
-    const fields = this.state.fields;
-    const newValue = e.target.value;
-    fields[i].value = newValue;
-    this.setState({ fields });
+  handlePersonalChange = (e) => {
+    const { id, value } = e.target;
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        personal: {
+          [id]: value,
+        },
+      };
+    });
   };
 
   render() {
     return (
       <form>
-        <FormSection
-          title="Basic Information"
-          inputFields={this.state.fields}
-          onChangeHandler={this.handleOnChange}
+        <Personal
+          state={this.state.personal}
+          onChange={this.handlePersonalChange}
         />
       </form>
     );

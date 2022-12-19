@@ -1,9 +1,9 @@
 import React from "react";
 import "../../styles/TextFields.css";
 
-class TextBox extends React.Component {
+class Input extends React.Component {
   render() {
-    const { description, index, id, type, value, onChangeHandler } = this.props;
+    const { description, id, type, value, onChangeHandler } = this.props;
     return (
       <div className="input-container">
         <label htmlFor={id}>{description}</label>
@@ -11,13 +11,12 @@ class TextBox extends React.Component {
           type={type}
           name={id}
           id={id}
-          index={index}
           value={value}
-          onChange={(e) => onChangeHandler(index, e)}
+          onChange={onChangeHandler}
         ></input>
       </div>
     );
   }
 }
 
-export default TextBox;
+export default Input;
