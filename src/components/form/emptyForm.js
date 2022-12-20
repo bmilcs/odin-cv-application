@@ -6,7 +6,6 @@ const emptyForm = {
     lastName: "",
     email: "",
     phone: "",
-    summary: "",
   },
   education: [
     {
