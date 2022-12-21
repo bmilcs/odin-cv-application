@@ -22,7 +22,4 @@ Welcome to Bryan Miller's CV Application Project, the [nineteenth assignment](ht
 ```sh
 # clone repo
 git clone https://github.com/bmilcs/odin-cv-application
-
-# dependencies
-npm i -D uuid
 ```
