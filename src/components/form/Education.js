@@ -44,9 +44,10 @@ class Education extends React.Component {
 
     return (
       <FormSection title="Education">
-        {educationGroups.map((fields) => (
-          <InputGroup fields={fields} key={fields.id} onChange={onChange} />
+        {educationGroups.map((fields, i) => (
+          <InputGroup fields={fields} key={`edu-${i}`} onChange={onChange} />
         ))}
+        <button>Add Education Item</button>
       </FormSection>
     );
   }

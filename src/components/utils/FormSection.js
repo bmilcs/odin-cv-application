@@ -1,5 +1,4 @@
 import React from "react";
-import Input from "./Input";
 import "../../styles/FormSection.css";
 
 class FormSection extends React.Component {
