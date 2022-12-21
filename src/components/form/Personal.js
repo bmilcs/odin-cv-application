@@ -6,7 +6,7 @@ import "../../styles/FormSection.css";
 class Personal extends React.Component {
   render() {
     const { state, onChange } = this.props;
-    const { firstName, lastName, email, phone, summary } = state;
+    const { firstName, lastName, email, phone } = state;
     const fields = [
       {
         description: "First Name",

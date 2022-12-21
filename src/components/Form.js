@@ -15,6 +15,7 @@ class Form extends React.Component {
       return {
         ...prevState,
         personal: {
+          ...prevState.personal,
           [id]: value,
         },
       };
