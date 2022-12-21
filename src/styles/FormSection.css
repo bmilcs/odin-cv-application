@@ -20,3 +20,23 @@ h2 {
   color: var(--clr-neutral-900);
   padding: 0.5rem;
 }
+
+button {
+  padding: 0.75rem 1rem;
+
+  border-radius: var(--border-radius-100);
+  border: 1px solid var(--clr-neutral-300);
+
+  background: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+
+  font: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  transition: var(--transition);
+}
+
+button:hover {
+  background: var(--clr-primary-300);
+}
