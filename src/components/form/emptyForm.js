@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
+import uniqid from "uniqid";
 
 const emptyForm = {
   personal: {
@@ -9,7 +9,7 @@ const emptyForm = {
   },
   education: [
     {
-      id: uuidv4(),
+      id: uniqid(),
       school: "",
       degree: "",
       startDate: "",
@@ -18,7 +18,7 @@ const emptyForm = {
   ],
   work: [
     {
-      id: uuidv4(),
+      id: uniqid(),
       employer: "",
       title: "",
       responsibilities: "",
