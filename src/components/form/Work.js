@@ -3,37 +3,45 @@ import FormSection from "../utils/FormSection";
 import InputGroup from "../utils/InputGroup";
 import "../../styles/FormSection.css";
 
-class Education extends React.Component {
+class Work extends React.Component {
   render() {
     const { state, onChange } = this.props;
 
-    const educationGroups = state.map((educationItem) => {
-      const { id, school, degree, startDate, endDate } = educationItem;
+    const workGroups = state.map((workItem) => {
+      const { id, employer, title, responsibilities, startDate, endDate } =
+        workItem;
       return [
         {
-          description: "School",
-          id: `education-school-${id}`,
+          description: "Employer",
+          id: `work-employer-${id}`,
           classes: "",
           type: "text",
-          value: school,
+          value: employer,
         },
         {
-          description: "Degree",
-          id: `education-degree-${id}`,
+          description: "Job Title",
+          id: `work-title-${id}`,
           classes: "",
           type: "text",
-          value: degree,
+          value: title,
+        },
+        {
+          description: "Responsibilities",
+          id: `work-responsibilities-${id}`,
+          classes: "",
+          type: "text",
+          value: responsibilities,
         },
         {
           description: "Start Date",
-          id: `education-startDate-${id}`,
+          id: `work-startDate-${id}`,
           classes: "",
           type: "text",
           value: startDate,
         },
         {
           description: "End Date",
-          id: `education-endDate-${id}`,
+          id: `work-endDate-${id}`,
           classes: "",
           type: "text",
           value: endDate,
@@ -42,14 +50,14 @@ class Education extends React.Component {
     });
 
     return (
-      <FormSection title="Education">
-        {educationGroups.map((fields, i) => (
+      <FormSection title="Work Experience">
+        {workGroups.map((fields, i) => (
           <InputGroup fields={fields} key={`edu-${i}`} onChange={onChange} />
         ))}
-        <button>Add Education Item</button>
+        <button>Add Work Item</button>
       </FormSection>
     );
   }
 }
 
-export default Education;
+export default Work;

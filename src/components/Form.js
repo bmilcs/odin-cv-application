@@ -1,7 +1,8 @@
 import React from "react";
 import Personal from "./form/Personal";
-import emptyForm from "./form/emptyForm";
 import Education from "./form/Education";
+import Work from "./form/Work";
+import emptyForm from "./form/emptyForm";
 
 class Form extends React.Component {
   constructor(props) {
@@ -58,7 +59,11 @@ class Form extends React.Component {
         />
         <Education
           state={this.state.education}
-          onChange={this.handleEducationChange}
+          onChange={this.handleWorkEducationChange}
+        />
+        <Work
+          state={this.state.work}
+          onChange={this.handleWorkEducationChange}
         />
       </form>
     );
