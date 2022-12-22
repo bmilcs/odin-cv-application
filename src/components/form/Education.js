@@ -13,28 +13,28 @@ class Education extends React.Component {
       return [
         {
           description: "School",
-          id: `school-${id}`,
+          id: `education-school-${id}`,
           classes: "",
           type: "text",
           value: school,
         },
         {
           description: "Degree",
-          id: `degree-${id}`,
+          id: `education-degree-${id}`,
           classes: "",
           type: "text",
           value: degree,
         },
         {
           description: "Start Date",
-          id: `startDate-${id}`,
+          id: `education-startDate-${id}`,
           classes: "",
           type: "text",
           value: startDate,
         },
         {
           description: "End Date",
-          id: `endDate-${id}`,
+          id: `education-endDate-${id}`,
           classes: "",
           type: "text",
           value: endDate,

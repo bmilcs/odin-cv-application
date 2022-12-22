@@ -22,23 +22,26 @@ class Form extends React.Component {
     });
   };
 
-  handleEducationChange = (e) => {
-    // this.state.education contains an array of education objects
-    // e.target (ie: an input element)'s id contains the corresponding state object key (school, degree, startDate, etc.)
-    // and an uniqid (school id). example e.target id: "degree-sj208alq"
+  handleWorkEducationChange = (e) => {
+    // this.state.education & this.state.work contain arrays of objects
+    // e.target (ie: an input element)'s html id contains the following info:
+    // category (education or work), the corresponding state object key(school, degree, startDate, etc.)
+    // and an uniqid (work or school id).
+    // - example: "education-degree-sj208alq"
 
     const { id, value } = e.target;
-    const objKeyAndSchoolID = id.split("-");
-    const objKey = objKeyAndSchoolID[0];
-    const schoolID = objKeyAndSchoolID[1];
+    const categoryObjKeyAndUniqID = id.split("-");
+    const category = categoryObjKeyAndUniqID[0];
+    const objKey = categoryObjKeyAndUniqID[1];
+    const uniqID = categoryObjKeyAndUniqID[2];
 
     this.setState((prevState) => {
       return {
         ...prevState,
-        education: prevState.education.map((eduItem) => {
-          if (eduItem.id !== schoolID) return eduItem;
+        [category]: prevState[category].map((item) => {
+          if (item.id !== uniqID) return item;
           return {
-            ...eduItem,
+            ...item,
             [objKey]: value,
           };
         }),
