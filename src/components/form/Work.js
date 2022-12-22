@@ -52,7 +52,9 @@ class Work extends React.Component {
     return (
       <FormSection title="Work Experience">
         {workGroups.map((fields, i) => (
-          <InputGroup fields={fields} key={`edu-${i}`} onChange={onChange} />
+          <div className="work-item">
+            <InputGroup fields={fields} key={`edu-${i}`} onChange={onChange} />
+          </div>
         ))}
         <button id="add-work-btn" onClick={onAdd}>
           Add Work Item
