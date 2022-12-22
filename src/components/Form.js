@@ -65,6 +65,22 @@ class Form extends React.Component {
     });
   };
 
+  handleDeleteItem = (e) => {
+    e.preventDefault();
+
+    const { id } = e.target;
+    const categoryAndUniqID = id.split("-");
+    const category = categoryAndUniqID[1];
+    const uniqid = categoryAndUniqID[2];
+
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        [category]: prevState[category].filter((item) => item.id !== uniqid),
+      };
+    });
+  };
+
   render() {
     return (
       <form>
@@ -76,11 +92,13 @@ class Form extends React.Component {
           state={this.state.education}
           onChange={this.handleWorkEducationChange}
           onAdd={this.handleAddItem}
+          onDelete={this.handleDeleteItem}
         />
         <Work
           state={this.state.work}
           onChange={this.handleWorkEducationChange}
           onAdd={this.handleAddItem}
+          onDelete={this.handleDeleteItem}
         />
       </form>
     );
