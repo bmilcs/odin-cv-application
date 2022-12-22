@@ -5,7 +5,7 @@ import "../../styles/FormSection.css";
 
 class Work extends React.Component {
   render() {
-    const { state, onChange } = this.props;
+    const { state, onChange, onAdd } = this.props;
 
     const workGroups = state.map((workItem) => {
       const { id, employer, title, responsibilities, startDate, endDate } =
@@ -54,7 +54,9 @@ class Work extends React.Component {
         {workGroups.map((fields, i) => (
           <InputGroup fields={fields} key={`edu-${i}`} onChange={onChange} />
         ))}
-        <button>Add Work Item</button>
+        <button id="add-work-btn" onClick={onAdd}>
+          Add Work Item
+        </button>{" "}
       </FormSection>
     );
   }

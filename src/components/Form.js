@@ -2,7 +2,7 @@ import React from "react";
 import Personal from "./form/Personal";
 import Education from "./form/Education";
 import Work from "./form/Work";
-import emptyForm from "./form/emptyForm";
+import { emptyForm, emptyEducationObj, emptyWorkObj } from "./form/emptyForm";
 
 class Form extends React.Component {
   constructor(props) {
@@ -50,6 +50,20 @@ class Form extends React.Component {
     });
   };
 
+  handleAddItem = (e) => {
+    const { id } = e.target;
+    const category = id.split("-")[1];
+    const newObj = category === "education" ? emptyEducationObj : emptyWorkObj;
+
+    e.preventDefault();
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        [category]: [...prevState[category], newObj],
+      };
+    });
+  };
+
   render() {
     return (
       <form>
@@ -60,10 +74,12 @@ class Form extends React.Component {
         <Education
           state={this.state.education}
           onChange={this.handleWorkEducationChange}
+          onAdd={this.handleAddItem}
         />
         <Work
           state={this.state.work}
           onChange={this.handleWorkEducationChange}
+          onAdd={this.handleAddItem}
         />
       </form>
     );

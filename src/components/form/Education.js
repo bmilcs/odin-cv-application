@@ -5,7 +5,7 @@ import "../../styles/FormSection.css";
 
 class Education extends React.Component {
   render() {
-    const { state, onChange } = this.props;
+    const { state, onChange, onAdd } = this.props;
 
     const educationGroups = state.map((educationItem) => {
       const { id, school, degree, startDate, endDate } = educationItem;
@@ -46,7 +46,9 @@ class Education extends React.Component {
         {educationGroups.map((fields, i) => (
           <InputGroup fields={fields} key={`edu-${i}`} onChange={onChange} />
         ))}
-        <button>Add Education Item</button>
+        <button id="add-education-btn" onClick={onAdd}>
+          Add Education Item
+        </button>
       </FormSection>
     );
   }
