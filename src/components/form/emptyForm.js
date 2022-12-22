@@ -1,20 +1,24 @@
 import uniqid from "uniqid";
 
-const emptyWorkObj = {
-  id: uniqid(),
-  employer: "",
-  title: "",
-  responsibilities: "",
-  startDate: "",
-  endDate: "",
+const WorkItem = () => {
+  return {
+    id: uniqid(),
+    employer: "",
+    title: "",
+    responsibilities: "",
+    startDate: "",
+    endDate: "",
+  };
 };
 
-const emptyEducationObj = {
-  id: uniqid(),
-  school: "",
-  degree: "",
-  startDate: "",
-  endDate: "",
+const EducationItem = () => {
+  return {
+    id: uniqid(),
+    school: "",
+    degree: "",
+    startDate: "",
+    endDate: "",
+  };
 };
 
 const emptyForm = {
@@ -24,8 +28,8 @@ const emptyForm = {
     email: "",
     phone: "",
   },
-  education: [emptyEducationObj],
-  work: [emptyWorkObj],
+  education: [EducationItem()],
+  work: [WorkItem()],
 };
 
-export { emptyForm, emptyWorkObj, emptyEducationObj };
+export { emptyForm, WorkItem, EducationItem };
