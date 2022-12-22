@@ -22,4 +22,7 @@ input {
   font-size: 1.25rem;
 
   background: var(--clr-neutral-200);
+
+  width: 100%;
+  size: 1;
 }

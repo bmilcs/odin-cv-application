@@ -56,7 +56,7 @@ class Work extends React.Component {
     return (
       <FormSection title="Work Experience">
         {workGroups.map((workGroup) => (
-          <div className="work-item" key={`work-group-${workGroup.id}`}>
+          <div className="work-item card" key={`work-group-${workGroup.id}`}>
             <InputGroup
               fields={workGroup.fields}
               key={`edu-${workGroup.id}`}

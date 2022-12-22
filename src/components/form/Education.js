@@ -48,7 +48,7 @@ class Education extends React.Component {
     return (
       <FormSection title="Education">
         {educationGroups.map((eduGroup) => (
-          <div className="education-item" key={`edu-group-${eduGroup.id}`}>
+          <div className="education-item card" key={`edu-group-${eduGroup.id}`}>
             <InputGroup
               fields={eduGroup.fields}
               key={`edu-${eduGroup.id}`}

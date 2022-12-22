@@ -8,7 +8,7 @@ class FormSection extends React.Component {
     return (
       <div className="section-container">
         <h2>{title}</h2>
-        <div className="input-group">{children}</div>
+        <div>{children}</div>
       </div>
     );
   }

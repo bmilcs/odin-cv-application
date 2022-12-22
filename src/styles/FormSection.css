@@ -1,29 +1,40 @@
+.card {
+  padding: 1.5rem;
+  margin-block: 1rem;
+
+  background: var(--clr-neutral-100);
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: var(--border-radius-900);
+}
+
 .input-group {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 1.5rem 2rem;
-
-  padding: 2rem;
-
-  background: var(--clr-neutral-100);
-  border: 1px solid var(--clr-neutral-300);
-  border-radius: var(--border-radius-900);
-  /* box-shadow: var(--box-shadow-100); */
 }
 
 h2 {
+  position: relative;
+
   margin-block: 1rem;
-  font-size: 1.5rem;
-  /* text-transform: uppercase; */
-  /* background: var(--clr-primary-700); */
-  color: var(--clr-neutral-900);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: var(--clr-primary-900);
   padding: 0.5rem;
+}
+
+h2::after {
+  content: "";
+  position: block;
+  background: var(--clr-neutral-900);
+  height: 100%;
+  width: 100%;
 }
 
 button {
   padding: 0.75rem 1rem;
-  margin-block: 1rem;
+  margin-top: 1rem;
 
   border-radius: var(--border-radius-100);
   border: 1px solid var(--clr-neutral-300);

@@ -40,7 +40,9 @@ class Personal extends React.Component {
 
     return (
       <FormSection title="Personal Info">
-        <InputGroup fields={fields} onChange={onChange} />
+        <div className="personal-info card">
+          <InputGroup fields={fields} onChange={onChange} />
+        </div>
       </FormSection>
     );
   }
