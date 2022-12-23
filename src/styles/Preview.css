@@ -12,7 +12,7 @@
   box-shadow: var(--box-shadow-200);
 }
 
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 842px) {
   .preview-container {
     position: sticky;
     top: 1rem;

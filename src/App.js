@@ -93,14 +93,16 @@ class App extends React.Component {
       <div className="app-container">
         <Header />
         <main>
-          <Preview state={this.state} />
-          <Form
-            state={this.state}
-            onDelete={this.handleDeleteItem}
-            onAdd={this.handleAddItem}
-            onPersonalChange={this.handlePersonalChange}
-            onWorkEducationChange={this.handleWorkEducationChange}
-          />
+          <div className="main-wrapper">
+            <Preview state={this.state} />
+            <Form
+              state={this.state}
+              onDelete={this.handleDeleteItem}
+              onAdd={this.handleAddItem}
+              onPersonalChange={this.handlePersonalChange}
+              onWorkEducationChange={this.handleWorkEducationChange}
+            />
+          </div>
         </main>
       </div>
     );

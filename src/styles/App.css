@@ -1,6 +1,4 @@
 .app-container {
-  margin-inline: min(5vh, 5vw);
-  max-width: 1920px;
-  padding: 1rem;
-  /* border-radius: var(--border-radius-900); */
+  /* min-width: 100vw; */
+  /* min-height: 100vh; */
 }

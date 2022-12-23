@@ -2,17 +2,30 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+
   margin-bottom: 1.5rem;
+  padding-block: 2rem;
+
+  background: var(--clr-primary-600);
+
+  box-shadow: var(--box-shadow-200);
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding-inline: 1rem;
 }
 
 header svg {
-  height: 5rem;
-  fill: var(--clr-primary-200);
+  height: min(4rem, 12vw);
+  fill: var(--clr-primary-300);
 }
 
 header h1 {
-  color: var(--clr-neutral-800);
+  color: var(--clr-neutral-300);
 
   text-transform: uppercase;
   letter-spacing: -1.75px;
@@ -24,14 +37,16 @@ header h1 {
 }
 
 h1 span {
-  color: var(--clr-primary-400);
+  color: var(--clr-primary-100);
 }
 
 header p {
+  padding-left: 0.2rem;
+
   line-height: 1;
   font-weight: 400;
-  font-size: min(1rem, 4vw);
-  color: var(--clr-neutral-700);
+  font-size: min(1rem, 3.5vw);
   text-transform: uppercase;
-  padding-left: 0.2rem;
+
+  color: var(--clr-neutral-300);
 }

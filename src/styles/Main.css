@@ -1,5 +1,15 @@
 main {
+  display: flex;
+  justify-content: center;
+}
+
+.main-wrapper {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(350px, 90%), 1fr));
   gap: min(3.5rem, 5vw);
+  justify-content: center;
+
+  margin-inline: min(5vh, 5vw);
+  max-width: 1920px;
 }
