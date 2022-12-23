@@ -8,10 +8,10 @@ class Header extends React.Component {
       <header>
         <HeaderLogo />
         <div className="header-text-container">
-          <h1>
+          <h1 className="header">
             CV<span> Application</span>
           </h1>
-          <p>The React-Based Curriculum Vitae Application Creator</p>
+          <p>A React-Based Curriculum Vitae Application Creator</p>
         </div>
       </header>
     );

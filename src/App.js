@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/App.css";
+import "./styles/Main.css";
 import Header from "./components/Header";
 import Form from "./components/Form";
 import {
@@ -7,11 +8,13 @@ import {
   EducationItem,
   WorkItem,
 } from "./components/form/emptyForm";
+import sampleData from "./components/form/sampleData";
+import Preview from "./components/Preview";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { ...emptyForm };
+    this.state = { ...sampleData };
   }
 
   handlePersonalChange = (e) => {
@@ -89,13 +92,16 @@ class App extends React.Component {
     return (
       <div className="app-container">
         <Header />
-        <Form
-          state={this.state}
-          onDelete={this.handleDeleteItem}
-          onAdd={this.handleAddItem}
-          onPersonalChange={this.handlePersonalChange}
-          onWorkEducationChange={this.handleWorkEducationChange}
-        />
+        <main>
+          <Preview state={this.state} />
+          <Form
+            state={this.state}
+            onDelete={this.handleDeleteItem}
+            onAdd={this.handleAddItem}
+            onPersonalChange={this.handlePersonalChange}
+            onWorkEducationChange={this.handleWorkEducationChange}
+          />
+        </main>
       </div>
     );
   }
