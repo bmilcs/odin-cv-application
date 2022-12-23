@@ -10,13 +10,12 @@
   box-shadow: var(--box-shadow-200);
 }
 
-.left-column {
-  height: max-content;
-  position: sticky;
-  top: 1rem;
-}
-
 @media screen and (min-width: 842px) {
+  .left-column {
+    height: max-content;
+    position: sticky;
+    top: 1rem;
+  }
 }
 
 .preview-header-container,
@@ -42,7 +41,7 @@
 }
 
 .preview-button-container {
-  display: flex;
+  display: grid;
   gap: 1rem;
   justify-content: center;
   padding-block: 1rem;
