@@ -1,0 +1,35 @@
+.preview-container {
+  margin: 1rem;
+
+  height: max-content;
+
+  background: var(--clr-neutral-100);
+
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: var(--border-radius-900);
+  overflow: hidden;
+
+  box-shadow: var(--box-shadow-200);
+}
+
+.preview-header-container,
+.preview-content-container {
+  padding: 1.25rem;
+}
+
+.preview-header-container {
+  background: var(--clr-primary-300);
+  color: var(--clr-neutral-100);
+
+  box-shadow: var(--box-shadow-100);
+}
+
+.preview-container h2 {
+  margin-bottom: 1rem;
+}
+
+.preview-work-container,
+.preview-education-container {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}

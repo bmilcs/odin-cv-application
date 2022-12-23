@@ -3,8 +3,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-
-  padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 svg {
@@ -12,13 +11,13 @@ svg {
   fill: var(--clr-primary-200);
 }
 
-h1 {
+h1.header {
   color: var(--clr-neutral-800);
 
   text-transform: uppercase;
   letter-spacing: -1.75px;
   word-spacing: -5px;
-  line-height: 0.8;
+  line-height: 0.9;
 
   font-weight: 900;
   font-size: 3.5rem;
@@ -28,7 +27,7 @@ h1 span {
   color: var(--clr-primary-400);
 }
 
-p {
+header p {
   line-height: 1;
   font-weight: 400;
   font-size: 1rem;
