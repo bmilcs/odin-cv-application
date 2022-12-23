@@ -1,6 +1,4 @@
 .preview-container {
-  height: max-content;
-
   margin-bottom: 0.5rem;
 
   background: var(--clr-neutral-100);
@@ -12,11 +10,13 @@
   box-shadow: var(--box-shadow-200);
 }
 
+.left-column {
+  height: max-content;
+  position: sticky;
+  top: 1rem;
+}
+
 @media screen and (min-width: 842px) {
-  .preview-container {
-    position: sticky;
-    top: 1rem;
-  }
 }
 
 .preview-header-container,
@@ -39,4 +39,32 @@
 .preview-education-container {
   margin-bottom: 1rem;
   margin-left: 1rem;
+}
+
+.preview-button-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-block: 1rem;
+}
+
+.standard-button {
+  padding: 0.75rem 1.5rem;
+
+  border-radius: var(--border-radius-100);
+  border: 1px solid var(--clr-primary-600);
+
+  background: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+
+  font: inherit;
+  font-weight: bold;
+
+  text-transform: uppercase;
+
+  transition: var(--transition);
+}
+
+.standard-button:is(:hover, :focus) {
+  background: var(--clr-primary-300);
 }

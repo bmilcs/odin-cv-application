@@ -24,4 +24,10 @@ input {
   min-width: 100%;
 
   background: var(--clr-neutral-200);
+
+  transition: var(--transition);
+}
+
+input:is(:focus, :hover) {
+  border-bottom: 5px solid var(--clr-primary-300);
 }

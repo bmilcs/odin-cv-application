@@ -88,13 +88,25 @@ class App extends React.Component {
     });
   };
 
+  handleClearAllFields = () => {
+    this.setState({ ...emptyForm });
+  };
+
+  handleLoadSampleData = () => {
+    this.setState({ ...sampleData });
+  };
+
   render() {
     return (
       <div className="app-container">
         <Header />
         <main>
           <div className="main-wrapper">
-            <Preview state={this.state} />
+            <Preview
+              state={this.state}
+              clearAllFieldsHandler={this.handleClearAllFields}
+              loadSampleDataHandler={this.handleLoadSampleData}
+            />
             <Form
               state={this.state}
               onDelete={this.handleDeleteItem}
