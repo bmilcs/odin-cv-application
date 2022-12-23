@@ -34,9 +34,11 @@ class Preview extends React.Component {
               <div className="preview-work-container">
                 <h3>{w.title}</h3>
                 <p>{w.employer}</p>
-                <p>
-                  {w.startDate} - {w.endDate}
-                </p>
+                {w.startDate && w.endDate ? (
+                  <p>
+                    {w.startDate} - {w.endDate}
+                  </p>
+                ) : null}
               </div>
             );
           })}{" "}

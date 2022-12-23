@@ -1,8 +1,9 @@
 .card {
-  padding: 1.5rem;
+  padding: 1.25rem;
   margin-block: 1rem;
 
   background: var(--clr-neutral-100);
+
   border: 1px solid var(--clr-neutral-300);
   border-radius: var(--border-radius-900);
 }
@@ -10,37 +11,52 @@
 .input-group {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1.5rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem 1rem;
+}
+
+form .section-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 form h2 {
   position: relative;
 
-  margin-block: 1rem;
   font-size: 1.25rem;
   text-transform: uppercase;
   color: var(--clr-primary-900);
-  padding: 0.5rem;
 }
 
-button {
-  padding: 0.75rem 1rem;
-  margin-top: 1rem;
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
 
-  border-radius: var(--border-radius-100);
-  border: 1px solid var(--clr-neutral-300);
-
-  background: var(--clr-primary-400);
-  color: var(--clr-neutral-100);
-
-  font: inherit;
-  font-weight: 600;
-  text-transform: uppercase;
-
+form button {
   transition: var(--transition);
 }
 
-button:hover {
-  background: var(--clr-primary-300);
+form button svg {
+  width: 42px;
+  aspect-ratio: 1/1;
+  pointer-events: none;
+}
+
+.add-button,
+.delete-button {
+  margin-top: 1rem;
+
+  border: none;
+
+  background: none;
+  fill: var(--clr-primary-300);
+
+  padding: 0.25rem;
+}
+
+.add-button:hover,
+.delete-button:hover {
+  fill: var(--clr-primary-900);
 }

@@ -1,7 +1,7 @@
 .preview-container {
-  margin: 1rem;
-
   height: max-content;
+
+  margin-bottom: 0.5rem;
 
   background: var(--clr-neutral-100);
 
@@ -10,6 +10,13 @@
   overflow: hidden;
 
   box-shadow: var(--box-shadow-200);
+}
+
+@media screen and (min-width: 880px) {
+  .preview-container {
+    position: sticky;
+    top: 1rem;
+  }
 }
 
 .preview-header-container,
@@ -31,5 +38,5 @@
 .preview-work-container,
 .preview-education-container {
   margin-bottom: 1rem;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
 }

@@ -1,7 +1,9 @@
 import React from "react";
 import FormSection from "../utils/FormSection";
 import InputGroup from "../utils/InputGroup";
-import uniqid from "uniqid";
+import AddIcon from "../assets/AddIcon";
+import AddThickIcon from "../assets/AddThickIcon";
+import DeleteIcon from "../assets/DeleteIcon";
 import "../../styles/FormSection.css";
 
 class Work extends React.Component {
@@ -53,8 +55,14 @@ class Work extends React.Component {
       };
     });
 
+    const addWorkButton = (
+      <button id="add-work-btn" onClick={onAdd} className="add-button">
+        <AddThickIcon className="icon" />
+      </button>
+    );
+
     return (
-      <FormSection title="Work Experience">
+      <FormSection title="Work Experience" addButton={addWorkButton}>
         {workGroups.map((workGroup) => (
           <div className="work-item card" key={`work-group-${workGroup.id}`}>
             <InputGroup
@@ -62,14 +70,20 @@ class Work extends React.Component {
               key={`edu-${workGroup.id}`}
               onChange={onChange}
             />
-            <button id={`delete-work-${workGroup.id}`} onClick={onDelete}>
-              Delete
-            </button>
+            <div className="button-container">
+              <button id="add-work-btn" onClick={onAdd} className="add-button">
+                <AddIcon className="icon" />
+              </button>
+              <button
+                id={`delete-work-${workGroup.id}`}
+                onClick={onDelete}
+                className="delete-button"
+              >
+                <DeleteIcon />
+              </button>
+            </div>
           </div>
         ))}
-        <button id="add-work-btn" onClick={onAdd}>
-          Add Work Item
-        </button>{" "}
       </FormSection>
     );
   }

@@ -1,8 +1,10 @@
 import React from "react";
 import FormSection from "../utils/FormSection";
 import InputGroup from "../utils/InputGroup";
-import uniqid from "uniqid";
+import AddIcon from "../assets/AddIcon";
+import DeleteIcon from "../assets/DeleteIcon";
 import "../../styles/FormSection.css";
+import AddThickIcon from "../assets/AddThickIcon";
 
 class Education extends React.Component {
   render() {
@@ -45,8 +47,14 @@ class Education extends React.Component {
       };
     });
 
+    const addEducationButton = (
+      <button id="add-education-btn" onClick={onAdd} className="add-button">
+        <AddThickIcon />
+      </button>
+    );
+
     return (
-      <FormSection title="Education">
+      <FormSection title="Education" addButton={addEducationButton}>
         {educationGroups.map((eduGroup) => (
           <div className="education-item card" key={`edu-group-${eduGroup.id}`}>
             <InputGroup
@@ -54,15 +62,24 @@ class Education extends React.Component {
               key={`edu-${eduGroup.id}`}
               onChange={onChange}
             />
-            <button id={`delete-education-${eduGroup.id}`} onClick={onDelete}>
-              Delete
-            </button>
+            <div className="button-container">
+              <button
+                id="add-education-btn"
+                onClick={onAdd}
+                className="add-button"
+              >
+                <AddIcon />
+              </button>
+              <button
+                id={`delete-education-${eduGroup.id}`}
+                onClick={onDelete}
+                className="delete-button"
+              >
+                <DeleteIcon />
+              </button>
+            </div>
           </div>
         ))}
-
-        <button id="add-education-btn" onClick={onAdd}>
-          Add Education Item
-        </button>
       </FormSection>
     );
   }

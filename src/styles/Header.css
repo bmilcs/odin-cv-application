@@ -6,12 +6,12 @@ header {
   margin-bottom: 1.5rem;
 }
 
-svg {
+header svg {
   height: 5rem;
   fill: var(--clr-primary-200);
 }
 
-h1.header {
+header h1 {
   color: var(--clr-neutral-800);
 
   text-transform: uppercase;
@@ -20,7 +20,7 @@ h1.header {
   line-height: 0.9;
 
   font-weight: 900;
-  font-size: 3.5rem;
+  font-size: min(3.5rem, 8vw);
 }
 
 h1 span {
@@ -30,7 +30,7 @@ h1 span {
 header p {
   line-height: 1;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: min(1rem, 4vw);
   color: var(--clr-neutral-700);
   text-transform: uppercase;
   padding-left: 0.2rem;

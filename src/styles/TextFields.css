@@ -21,8 +21,7 @@ input {
   font: inherit;
   font-size: 1.25rem;
 
-  background: var(--clr-neutral-200);
+  min-width: 100%;
 
-  width: 100%;
-  size: 1;
+  background: var(--clr-neutral-200);
 }
