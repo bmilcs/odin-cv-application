@@ -1,16 +1,3 @@
-.preview-container {
-  margin-bottom: 0.5rem;
-
-  background: var(--clr-neutral-100);
-
-  overflow: hidden;
-
-  border: 1px solid var(--clr-neutral-300);
-  border-radius: var(--border-radius-900);
-
-  box-shadow: var(--box-shadow-200);
-}
-
 .left-column {
   overflow: hidden;
 }
@@ -21,6 +8,19 @@
     position: sticky;
     top: 1rem;
   }
+}
+
+.preview-container {
+  background: var(--clr-neutral-100);
+
+  overflow: hidden;
+
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: var(--border-radius-900);
+
+  box-shadow: var(--box-shadow-200);
+
+  margin-bottom: min(3.5rem, 10vh, 10vw);
 }
 
 .preview-header-container,
@@ -49,7 +49,9 @@
   display: grid;
   gap: 1rem;
   justify-content: center;
+
   padding-block: 1rem;
+  margin-bottom: min(3.5rem, 10vh, 10vw);
 }
 
 .standard-button {
