@@ -32,6 +32,7 @@ form h2 {
 .button-container {
   display: flex;
   justify-content: flex-end;
+  margin-top: 1rem;
 }
 
 form button {
@@ -46,8 +47,6 @@ form button svg {
 
 .add-button,
 .delete-button {
-  margin-top: 1rem;
-
   border: none;
 
   background: none;

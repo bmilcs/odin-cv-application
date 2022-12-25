@@ -11,5 +11,7 @@ main {
   justify-content: center;
 
   margin-inline: min(5vh, 5vw);
+  margin-block: min(3.5rem, 10vh, 10vw);
+
   max-width: 1920px;
 }

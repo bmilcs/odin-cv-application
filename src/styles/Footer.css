@@ -3,7 +3,8 @@ footer {
   place-items: center;
 
   padding: 1rem;
-  margin-top: min(3.5rem, 10vh, 10vw);
+  /* margin-top: min(3.5rem, 10vh, 10vw); */
+  margin-top: auto;
 
   background: var(--clr-primary-500);
 

@@ -3,7 +3,6 @@ header {
   align-items: center;
   justify-content: center;
 
-  margin-bottom: min(3.5rem, 10vh, 10vw);
   padding-block: 2rem;
 
   background: var(--clr-primary-600);
