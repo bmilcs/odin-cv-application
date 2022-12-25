@@ -10,6 +10,7 @@ import {
 } from "./components/form/emptyForm";
 import sampleData from "./components/form/sampleData";
 import Preview from "./components/Preview";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
   constructor(props) {
@@ -116,6 +117,7 @@ class App extends React.Component {
             />
           </div>
         </main>
+        <Footer />
       </div>
     );
   }
