@@ -28,8 +28,8 @@ const emptyForm = {
     email: "",
     phone: "",
   },
-  education: [EducationItem()],
-  work: [WorkItem()],
+  education: [],
+  work: [],
 };
 
 export { emptyForm, WorkItem, EducationItem };
