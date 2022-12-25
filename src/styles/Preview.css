@@ -3,11 +3,16 @@
 
   background: var(--clr-neutral-100);
 
-  border: 1px solid var(--clr-neutral-300);
-  border-radius: var(--border-radius-900);
   overflow: hidden;
 
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: var(--border-radius-900);
+
   box-shadow: var(--box-shadow-200);
+}
+
+.left-column {
+  overflow: hidden;
 }
 
 @media screen and (min-width: 842px) {
