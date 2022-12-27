@@ -80,13 +80,18 @@ const EducationItem = () => {
 };
 ```
 
+### Room for Improvement
+
+If I were to recreate this project with the experience I now have, I would have segmented the buttons into their own components and changed the way they are identified by their corresponding event handler functions.
+
+For example, the `+` Education & Work buttons rely on the html `id` attribute and splitting its value into an array, which is not ideal. I should have opted for `dataset` attributes to make it easier to read and understand for other developers.
+
+The way I organized the project, including the folder structure, isn't great. Considering that this was my first introduction to React, I treated this project as more of a playground or sandbox to learn in, rather than a production ready piece of software. In the interest of moving forward, I am settling on a working first draft. All in all, this was a great learning experience and I will take these lessons into future projects.
+
 ## Screenshots
 
 > Desktop
-> ![Desktop Screenshot #1](./images/screenshot-desktop1.png)
-> ![Desktop Screenshot #2](./images/screenshot-desktop2.png)
-> ![Mobile Screenshot #1](./images/screenshot-mobile1.png)
-> ![Mobile Screenshot #2](./images/screenshot-mobile2.png)
+> ![Desktop Screenshot #1](./images/screenshot-desktop1.png) > ![Desktop Screenshot #2](./images/screenshot-desktop2.png) > ![Mobile Screenshot #1](./images/screenshot-mobile1.png) > ![Mobile Screenshot #2](./images/screenshot-mobile2.png)
 
 ## Links
 
