@@ -63,6 +63,7 @@ const Preview = (props) => {
                     {w.endDate}
                   </p>
                 ) : null}
+                <p>{w.responsibilities}</p>
               </div>
             );
           })}
