@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/App.css";
 import "./styles/Main.css";
 import Header from "./components/Header";
@@ -12,26 +12,22 @@ import sampleData from "./components/form/sampleData";
 import Preview from "./components/Preview";
 import Footer from "./components/Footer";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { ...sampleData };
-  }
+const App = (props) => {
+  const [formData, setFormData] = useState(sampleData);
 
-  handlePersonalChange = (e) => {
+  const handlePersonalChange = (e) => {
     const { id, value } = e.target;
-    this.setState((prevState) => {
-      return {
-        ...prevState,
-        personal: {
-          ...prevState.personal,
-          [id]: value,
-        },
-      };
-    });
+
+    setFormData((prevState) => ({
+      ...prevState,
+      personal: {
+        ...prevState.personal,
+        [id]: value,
+      },
+    }));
   };
 
-  handleWorkEducationChange = (e) => {
+  const handleWorkEducationChange = (e) => {
     // this.state.education & this.state.work contain arrays of objects
     // e.target (ie: an input element)'s html id contains the following info:
     // category (education or work), the corresponding state object key(school, degree, startDate, etc.)
@@ -44,36 +40,32 @@ class App extends React.Component {
     const objKey = categoryObjKeyAndUniqID[1];
     const uniqID = categoryObjKeyAndUniqID[2];
 
-    this.setState((prevState) => {
-      return {
-        ...prevState,
-        [category]: prevState[category].map((item) => {
-          if (item.id !== uniqID) return item;
-          return {
-            ...item,
-            [objKey]: value,
-          };
-        }),
-      };
-    });
+    setFormData((prevState) => ({
+      ...prevState,
+      [category]: prevState[category].map((item) => {
+        if (item.id !== uniqID) return item;
+        return {
+          ...item,
+          [objKey]: value,
+        };
+      }),
+    }));
   };
 
-  handleAddItem = (e) => {
+  const handleAddItem = (e) => {
     e.preventDefault();
 
     const { id } = e.target;
     const category = id.split("-")[1];
     const newObj = category === "education" ? EducationItem() : WorkItem();
 
-    this.setState((prevState) => {
-      return {
-        ...prevState,
-        [category]: [...prevState[category], newObj],
-      };
-    });
+    setFormData((prevState) => ({
+      ...prevState,
+      [category]: [...prevState[category], newObj],
+    }));
   };
 
-  handleDeleteItem = (e) => {
+  const handleDeleteItem = (e) => {
     e.preventDefault();
 
     const { id } = e.target;
@@ -81,46 +73,42 @@ class App extends React.Component {
     const category = categoryAndUniqID[1];
     const uniqid = categoryAndUniqID[2];
 
-    this.setState((prevState) => {
-      return {
-        ...prevState,
-        [category]: prevState[category].filter((item) => item.id !== uniqid),
-      };
-    });
+    setFormData((prevState) => ({
+      ...prevState,
+      [category]: prevState[category].filter((item) => item.id !== uniqid),
+    }));
   };
 
-  handleClearAllFields = () => {
-    this.setState({ ...emptyForm });
+  const handleClearAllFields = () => {
+    setFormData({ ...emptyForm });
   };
 
-  handleLoadSampleData = () => {
-    this.setState({ ...sampleData });
+  const handleLoadSampleData = () => {
+    setFormData({ ...sampleData });
   };
 
-  render() {
-    return (
-      <div className="app-container">
-        <Header />
-        <main>
-          <div className="main-wrapper">
-            <Preview
-              state={this.state}
-              clearAllFieldsHandler={this.handleClearAllFields}
-              loadSampleDataHandler={this.handleLoadSampleData}
-            />
-            <Form
-              state={this.state}
-              onDelete={this.handleDeleteItem}
-              onAdd={this.handleAddItem}
-              onPersonalChange={this.handlePersonalChange}
-              onWorkEducationChange={this.handleWorkEducationChange}
-            />
-          </div>
-        </main>
-        <Footer />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="app-container">
+      <Header />
+      <main>
+        <div className="main-wrapper">
+          <Preview
+            state={formData}
+            clearAllFieldsHandler={handleClearAllFields}
+            loadSampleDataHandler={handleLoadSampleData}
+          />
+          <Form
+            state={formData}
+            onDelete={handleDeleteItem}
+            onAdd={handleAddItem}
+            onPersonalChange={handlePersonalChange}
+            onWorkEducationChange={handleWorkEducationChange}
+          />
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
 export default App;
