@@ -1,20 +1,18 @@
 import React from "react";
 import "../../styles/FormSection.css";
 
-class FormSection extends React.Component {
-  render() {
-    const { title, children, addButton } = this.props;
+const FormSection = (props) => {
+  const { title, children, addButton } = props;
 
-    return (
-      <div className="section-container">
-        <div className="section-header-container">
-          <h2>{title}</h2>
-          {addButton}
-        </div>
-        <div>{children}</div>
+  return (
+    <div className="section-container">
+      <div className="section-header-container">
+        <h2>{title}</h2>
+        {addButton}
       </div>
-    );
-  }
-}
+      <div>{children}</div>
+    </div>
+  );
+};
 
 export default FormSection;
